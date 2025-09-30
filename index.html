@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Adam Kuzniarski" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <main>
+      <figure class="gallows">
+        <img id="stage" alt="Hangman Stage" />
+        <figcaption>
+            Fails: <span id="wrong-count">0</span>/<span id="max-wrong">10</span>
+        </figcaption>
+      </figure>
+
+      <section class="word">
+        <div id="keyboard" class="keys"></div>
+      </section>
+      <section class="controls">
+        <button id="restart" class="btn">New Game</button>
+        <span id="message" role="status" aria-live="polite"></span>
+      </section>
+    </main>
+  </body>
+</html>
