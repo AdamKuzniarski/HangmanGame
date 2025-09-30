@@ -41,9 +41,10 @@ function ABC() {
       const pressedLetter = looseLetterArr.filter(
         (letter) => letter === li.textContent
       );
+      const pressedLetterToString = pressedLetter.toString() 
       console.log(pressedLetter)
-      const x = looseLetterArr.includes(pressedLetter)
-        console.log(x)
+      const isMatch = looseLetterArr.includes(pressedLetterToString)
+        console.log(isMatch)
 
         
       
