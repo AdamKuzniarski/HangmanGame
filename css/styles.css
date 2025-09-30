@@ -1,0 +1,24 @@
+:root {
+  --background: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --accent2: #34d399;
+  --danger: #d61a1a;
+  --radius: 14px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
