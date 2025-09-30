@@ -42,6 +42,15 @@ li {
   gap: 10px;
 }
 
-.pressed-letter{
+.pressed-letter {
   background: var(--accent2);
 }
+.game-over {
+   display: flex;
+   justify-content: center;
+  background: var(--danger); 
+  
+}
+ .visibility{
+  visibility: hidden;
+ }
