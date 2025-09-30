@@ -1,5 +1,5 @@
 :root {
-  --background: #0f172a;
+  --background: #0a1328;
   --panel: #111827;
   --text: #e5e7eb;
   --muted: #9ca3af;
@@ -18,7 +18,30 @@
 body {
   margin: 0;
   padding: 0;
-  
+  font-family: "Bitcount Prop Single Ink", system-ui;
+  background: var(--background);
 }
 
+.abc {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  font-size: small;
+  text-align: center;
+}
 
+li {
+  border: 1px solid white;
+}
+
+#line {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pressed-letter{
+  background: var(--accent2);
+}
