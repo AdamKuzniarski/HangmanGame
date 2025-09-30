@@ -29,7 +29,7 @@ const alphabetKleinArray = Array.from({ length: 26 }, (_, i) =>
   String.fromCharCode(97 + i)
 );
 let counter = 0;
-const MAX_WRONG = 1;
+const MAX_WRONG = 10;
 
 const looseLetterArr = [...randomPick];
 console.log(looseLetterArr);
@@ -49,10 +49,15 @@ function ABC() {
       const x = wrongCount;
       console.log(x);
 
-      if (isMatch === false) {
+      if (isMatch) {
+        looseLetterArr.forEach((character, index) => {
+          if (character === pressedLetter) {
+            div.children[index].textContent = character; // div.chlidren = span mit Unterstrich!
+          }
+        });
+      } else {
         counter++;
-        wrongCount.innerHTML = counter;
-        console.log(wrongCount);
+        wrongCount.textContent = counter;
       }
       if (counter >= MAX_WRONG) {
         gameOver.classList.remove("visibility");
@@ -65,9 +70,11 @@ function ABC() {
 ABC();
 
 function underscore() {
-  const underScore = document.createElement("p");
-  underScore.textContent = "_ ".repeat(looseLetterArr.length);
-  div.append(underScore);
+  div.innerHTML = "";
+  looseLetterArr.forEach(() => {
+    const slot = document.createElement("span");
+    slot.textContent = "_";
+    div.append(slot);
+  });
 }
-
 underscore();
